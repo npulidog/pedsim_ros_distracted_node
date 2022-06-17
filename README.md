@@ -4,7 +4,7 @@
 
 ```
 cd [workspace]/src
-git clone https://github.com/srl-freiburg/pedsim_ros.git  
+git clone https://github.com/npulidog/pedsim_ros_distracted_node.git
 cd pedsim_ros
 git submodule update --init --recursive
 cd ../..
