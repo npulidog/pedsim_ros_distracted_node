@@ -22,9 +22,9 @@ def set_position(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         position = Point()
-        position.x = random.rand(1)*x
-        position.y = random.rand(1)*y
-        position.z = random.rand(1)*z
+        position.x = x
+        position.y = y
+        position.z = z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -76,10 +76,10 @@ def set_orientation(x, y, z, w) -> bool:
         orig_agent_state = client_get_agent_state()
 
         orientation = Quaternion()
-        orientation.x = random.rand(1)*x
-        orientation.y = random.rand(1)*y
-        orientation.z = random.rand(1)*z
-        orientation.w = random.rand(1)*w
+        orientation.x = x
+        orientation.y = y
+        orientation.z = z
+        orientation.w = w
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -131,9 +131,9 @@ def set_linear(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         linear = Vector3()
-        linear.x = random.rand(1)*x
-        linear.y = random.rand(1)*y
-        linear.z = random.rand(1)*z
+        linear.x = 0.8*x
+        linear.y = 0.8*y
+        linear.z = 0.8*z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -185,9 +185,9 @@ def set_angular(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         angular = Vector3()
-        angular.x = random.rand(1)*x
-        angular.y = random.rand(1)*y
-        angular.z = random.rand(1)*z
+        angular.x = 0.8*x
+        angular.y = 0.8*y
+        angular.z = 0.8*z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -239,9 +239,9 @@ def set_desired_force(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         desired_force = Vector3()
-        desired_force.x = random.rand(1)*x
-        desired_force.y = random.rand(1)*y
-        desired_force.z = random.rand(1)*z
+        desired_force.x = random.randrange(80,100)*x /100
+        desired_force.y = random.randrange(80,100)*y /100
+        desired_force.z = random.randrange(80,100)*z /100
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -293,9 +293,9 @@ def set_obstacle_force(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         obstacle_force = Vector3()
-        obstacle_force.x = random.rand(1)*x
-        obstacle_force.y = random.rand(1)*y
-        obstacle_force.z = random.rand(1)*z
+        obstacle_force.x = 0.85*x
+        obstacle_force.y = 0.85*y
+        obstacle_force.z = 0.85*z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -347,9 +347,9 @@ def set_social_force(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         social_force = Vector3()
-        social_force.x = random.rand(1)*x
-        social_force.y = random.rand(1)*y
-        social_force.z = random.rand(1)*z
+        social_force.x = 0.8*x
+        social_force.y = 0.8*y
+        social_force.z = 0.8*z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -401,9 +401,9 @@ def set_group_coherence_force(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         group_coherence_force = Vector3()
-        group_coherence_force.x = random.rand(1)*x
-        group_coherence_force.y = random.rand(1)*y
-        group_coherence_force.z = random.rand(1)*z
+        group_coherence_force.x = 0.95*x
+        group_coherence_force.y = 0.95*y
+        group_coherence_force.z = 0.95*z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -455,9 +455,9 @@ def set_group_gaze_force(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         group_gaze_force = Vector3()
-        group_gaze_force.x = random.rand(1)*x
-        group_gaze_force.y = random.rand(1)*y
-        group_gaze_force.z = random.rand(1)*z
+        group_gaze_force.x = 0.95*x
+        group_gaze_force.y = 0.95*y
+        group_gaze_force.z = 0.95*z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -509,9 +509,9 @@ def set_group_repulsion_force(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         group_repulsion_force = Vector3()
-        group_repulsion_force.x = random.rand(1)*x
-        group_repulsion_force.y = random.rand(1)*y
-        group_repulsion_force.z = random.rand(1)*z
+        group_repulsion_force.x = 0.95*x
+        group_repulsion_force.y = 0.95*y
+        group_repulsion_force.z = 0.95*z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
@@ -563,9 +563,9 @@ def set_random_force(x, y, z) -> bool:
         orig_agent_state = client_get_agent_state()
 
         random_force = Vector3()
-        random_force.x = random.rand(1)*x
-        random_force.y = random.rand(1)*y
-        random_force.z = random.rand(1)*z
+        random_force.x = x
+        random_force.y = y
+        random_force.z = z
 
         new_agent_state = SetAgentStateRequest( 
                                         seq=orig_agent_state.seq,
