@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This scenario file was created by SGDiCoP on 2014-06-05T18:26:32-->
+<scenario>
+    <!--Obstacles-->
+    <obstacle x1="20" y1="0" x2="20" y2="15"/>
+    <obstacle x1="0" y1="15" x2="20" y2="15"/>
+    <obstacle x1="40" y1="15" x2="60" y2="15"/>
+    <obstacle x1="40" y1="0" x2="40" y2="15"/>
+    <obstacle x1="40" y1="35" x2="60" y2="35"/>
+    <obstacle x1="40" y1="35" x2="40" y2="55"/>
+    <obstacle x1="20" y1="35" x2="0" y2="35"/>
+    <obstacle x1="20" y1="35" x2="20" y2="55"/>
+   <!--Waypoints (incl. WaitingQueues)-->
+    <waypoint id="a" x="5" y="27.5" r="5"/>
+    <waypoint id="b" x="55" y="27.5" r="5"/>
+    <waypoint id="c" x="30" y="5" r="5"/>
+    <waypoint id="d" x="30" y="50" r="5"/>
+
+    <!--Attractions-->
+    <attraction id="info_zone" x="30" y="28" width="15" height="4" strength="0"/>
+    <attraction id="lacoste" x="10" y="15" width="6" height="15" strength="5"/>
+    <attraction id="thalia" x="52" y="15" width="6" height="10" strength="10"/>
+    <!--Agents-->
+    <!--salen del a -->
+    <agent x="0" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="b"/>         
+    </agent>
+    <agent x="0" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="c"/>         
+    </agent>
+    <agent x="0" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="d"/>         
+    </agent>
+    <!--salen del b -->
+    <agent x="60" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="a"/>       
+    </agent>
+    <agent x="60" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="c"/>       
+    </agent>
+    <agent x="60" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="d"/>       
+    </agent>
+    <!--salen del c -->
+    <agent x="30" y="0" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="a"/>        
+    </agent>
+        <agent x="30" y="0" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="b"/>        
+    </agent>
+        <agent x="30" y="0" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="d"/>        
+    </agent>
+    <!--salen del d -->
+    <agent x="30" y="55" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="a"/>        
+    </agent>
+    <agent x="30" y="55" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="b"/>        
+    </agent>
+    <agent x="30" y="55" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="c"/>        
+    </agent>
+</scenario>
