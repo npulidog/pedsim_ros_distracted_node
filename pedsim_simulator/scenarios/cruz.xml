@@ -23,42 +23,79 @@
     <!--Agents-->
     <!--salen del a -->
     <agent x="0" y="27.5" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="b"/>         
+        <addwaypoint id="b"/>   
+        <addwaypoint id="a"/>  
+        <addwaypoint id="c"/>
+        <addwaypoint id="d"/>        
     </agent>
     <agent x="0" y="27.5" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="c"/>         
+        <addwaypoint id="c"/>  
+        <addwaypoint id="d"/> 
+        <addwaypoint id="b"/>   
+        <addwaypoint id="a"/>         
     </agent>
     <agent x="0" y="27.5" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="d"/>         
+        <addwaypoint id="d"/>  
+        <addwaypoint id="b"/>     
+        <addwaypoint id="a"/>  
+        <addwaypoint id="c"/>  
     </agent>
     <!--salen del b -->
     <agent x="60" y="27.5" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="a"/>       
-    </agent>
-    <agent x="60" y="27.5" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="c"/>       
-    </agent>
-    <agent x="60" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="a"/>  
+        <addwaypoint id="c"/>
         <addwaypoint id="d"/>       
+        <addwaypoint id="b"/>       
+    </agent>
+    <agent x="60" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="c"/>  
+        <addwaypoint id="d"/> 
+        <addwaypoint id="b"/>   
+        <addwaypoint id="a"/>  
+             
+    </agent>
+    <agent x="60" y="27.5" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="d"/>      
+        <addwaypoint id="b"/>     
+        <addwaypoint id="a"/>  
+        <addwaypoint id="c"/>   
     </agent>
     <!--salen del c -->
     <agent x="30" y="0" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="a"/>        
+        <addwaypoint id="a"/>    
+        <addwaypoint id="c"/>
+        <addwaypoint id="d"/>       
+        <addwaypoint id="b"/>      
     </agent>
         <agent x="30" y="0" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="b"/>        
+        <addwaypoint id="b"/>     
+        <addwaypoint id="a"/>  
+        <addwaypoint id="c"/>
+        <addwaypoint id="d"/>  
     </agent>
         <agent x="30" y="0" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="d"/>        
+        <addwaypoint id="d"/>  
+        <addwaypoint id="b"/>     
+        <addwaypoint id="a"/>  
+        <addwaypoint id="c"/>        
     </agent>
     <!--salen del d -->
     <agent x="30" y="55" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="a"/>   
+        <addwaypoint id="c"/>
+        <addwaypoint id="d"/>       
+        <addwaypoint id="b"/>  
+    </agent>
+    <agent x="30" y="55" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="b"/>   
+        <addwaypoint id="a"/>  
+        <addwaypoint id="c"/>
+        <addwaypoint id="d"/>         
+    </agent>
+    <agent x="30" y="55" n="5" dx="5" dy="5" type="1">
+        <addwaypoint id="c"/>  
+        <addwaypoint id="d"/> 
+        <addwaypoint id="b"/>   
         <addwaypoint id="a"/>        
-    </agent>
-    <agent x="30" y="55" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="b"/>        
-    </agent>
-    <agent x="30" y="55" n="5" dx="5" dy="5" type="1">
-        <addwaypoint id="c"/>        
     </agent>
 </scenario>
