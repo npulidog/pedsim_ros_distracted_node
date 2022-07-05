@@ -7,26 +7,24 @@ import rospy
 import time
 from std_msgs.msg import String
 from numpy import random
-from pedsim_msgs.msg import AgentForce
+from pedsim_msgs.msg import AgentState, AgentForce
 
 
 from pedsim_srvs.srv import GetAgentState, SetAgentState, SetAgentStateRequest
 from geometry_msgs.msg import Vector3
 from geometry_msgs.msg import Pose, Point, Quaternion, Twist
+
+def callback(data):
+   rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
+
 def Init():
-    rospy.init_node("sebastian", anonymous=True)
+    rospy.init_node("distractor_node", anonymous=True)
     global pub
-    pub = rospy.Publisher('sebitas', String, queue_size=1)
-    rospy.Subscriber("/pedsim_simulator/simulated_agents",AgentForce, set_position)
-"""def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
-    
-    rospy.Subscriber("pedsim_simulator",String,callback)"""
+    pub = rospy.Publisher('/distractor_topic', String, queue_size=1)
+    rospy.Subscriber("/pedsim_simulator/simulated_agents",AgentState, callback)
+
 def listener():
     rate = rospy.Rate(2)
-
-
-
 
 def set_position() -> bool:
 
@@ -62,6 +60,9 @@ def set_position() -> bool:
 
             client_set_agent_state = rospy.ServiceProxy("pedsim_srvs/SetAgentState", SetAgentState)
             distracted_agent = client_set_agent_state(new_agent_state)
+
+            rospy.loginfo(distracted_agent)
+            pub.publish(distracted_agent)
 
             return distracted_agent.finished
 
@@ -639,4 +640,4 @@ while not rospy.is_shutdown():
         get_group_repulsion_force()
         set_random_force()
         get_random_force()       
-        print("Sebastian")
+        print("Active Distractor Node")
