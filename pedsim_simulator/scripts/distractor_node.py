@@ -7,6 +7,7 @@ from numpy import random
 
 from pedsim_srvs.srv import GetAgentState, SetAgentState, SetAgentStateRequest
 from geometry_msgs.msg import Vector3
+from geometry_msgs.msg import Pose, Point, Quaternion, Twist
 
 def set_position(x, y, z) -> bool:
 
@@ -53,7 +54,6 @@ def set_position(x, y, z) -> bool:
 def get_position() -> Point:
     """
     Function to get the current value of position
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -108,7 +108,6 @@ def set_orientation(x, y, z, w) -> bool:
 def get_orientation() -> Quaternion:
     """
     Function to get the current value of orientation
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -162,7 +161,6 @@ def set_linear(x, y, z) -> bool:
 def get_linear() -> Vector3:
     """
     Function to get the current value of linear
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -216,7 +214,6 @@ def set_angular(x, y, z) -> bool:
 def get_angular() -> Vector3:
     """
     Function to get the current value of angular
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -270,7 +267,6 @@ def set_desired_force(x, y, z) -> bool:
 def get_desired_force() -> Vector3:
     """
     Function to get the current value of desired force
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -324,7 +320,6 @@ def set_obstacle_force(x, y, z) -> bool:
 def get_obstacle_force() -> Vector3:
     """
     Function to get the current value of obstacle force
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -378,7 +373,6 @@ def set_social_force(x, y, z) -> bool:
 def get_social_force() -> Vector3:
     """
     Function to get the current value of social force
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -432,7 +426,6 @@ def set_group_coherence_force(x, y, z) -> bool:
 def get_group_coherence_force() -> Vector3:
     """
     Function to get the current value of group coherence force
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -486,7 +479,6 @@ def set_group_gaze_force(x, y, z) -> bool:
 def get_group_gaze_force() -> Vector3:
     """
     Function to get the current value of group gaze force
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -540,7 +532,6 @@ def set_group_repulsion_force(x, y, z) -> bool:
 def get_group_repulsion_force() -> Vector3:
     """
     Function to get the current value of group repulsion force
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -594,7 +585,6 @@ def set_random_force(x, y, z) -> bool:
 def get_random_force() -> Vector3:
     """
     Function to get the current value of random force
-
     """
 
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
@@ -602,8 +592,3 @@ def get_random_force() -> Vector3:
     agent_state = client_get_agent_state()
 
     return agent_state.random_force
-
-def main():
-
-if __name__ == '__main__':
-    main()w
