@@ -61,9 +61,6 @@ def set_position() -> bool:
             client_set_agent_state = rospy.ServiceProxy("pedsim_srvs/SetAgentState", SetAgentState)
             distracted_agent = client_set_agent_state(new_agent_state)
 
-            rospy.loginfo(distracted_agent)
-            pub.publish(distracted_agent)
-
             return distracted_agent.finished
 
 def get_position() -> Point:
@@ -74,6 +71,9 @@ def get_position() -> Point:
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
+
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
 
     return agent_state.position
 
@@ -129,6 +129,9 @@ def get_orientation() -> Quaternion:
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
 
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
+
     return agent_state.orientation
 
 def set_linear() -> bool:
@@ -183,6 +186,9 @@ def get_linear() -> Vector3:
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
 
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
+
     return agent_state.linear
 
 def set_angular() -> bool:
@@ -235,6 +241,9 @@ def get_angular() -> Vector3:
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
+
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
 
     return agent_state.angular
 
@@ -289,6 +298,9 @@ def get_desired_force() -> Vector3:
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
 
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
+
     return agent_state.desired_force
 
 def set_obstacle_force() -> bool:
@@ -341,6 +353,9 @@ def get_obstacle_force() -> Vector3:
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
+
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
 
     return agent_state.obstacle_force
 
@@ -395,6 +410,9 @@ def get_social_force() -> Vector3:
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
 
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
+
     return agent_state.social_force
 
 def set_group_coherence_force() -> bool:
@@ -447,6 +465,9 @@ def get_group_coherence_force() -> Vector3:
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
+
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
 
     return agent_state.group_coherence_force
 
@@ -501,6 +522,9 @@ def get_group_gaze_force() -> Vector3:
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
 
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
+
     return agent_state.group_gaze_force
 
 def set_group_repulsion_force() -> bool:
@@ -554,6 +578,9 @@ def get_group_repulsion_force() -> Vector3:
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
 
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
+
     return agent_state.group_repulsion_force
 
 def set_random_force() -> bool:
@@ -606,6 +633,9 @@ def get_random_force() -> Vector3:
     rospy.wait_for_service("pedsim_srvs/GetAgentState")
     client_get_agent_state = rospy.ServiceProxy("pedsim_srvs/GetAgentState", GetAgentState)
     agent_state = client_get_agent_state()
+
+    rospy.loginfo(agent_state)
+    pub.publish(agent_state)
 
     return agent_state.random_force
 
