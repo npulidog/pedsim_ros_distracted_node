@@ -639,5 +639,5 @@ while not rospy.is_shutdown():
         get_group_repulsion_force()
         set_random_force()
         get_random_force()       
-        print("coma mierda sebastian")
+        print("Sebastian")
         
