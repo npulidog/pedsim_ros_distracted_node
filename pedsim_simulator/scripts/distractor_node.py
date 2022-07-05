@@ -7,7 +7,7 @@ import rospy
 import time
 from std_msgs.msg import String
 from numpy import random
-from AgentForce.msg import social_force
+from pedsim_msgs.msg import AgentForce
 
 
 from pedsim_srvs.srv import GetAgentState, SetAgentState, SetAgentStateRequest
@@ -17,7 +17,7 @@ def Init():
     rospy.init_node("sebastian", anonymous=True)
     global pub
     pub = rospy.Publisher('sebitas', String, queue_size=1)
-    rospy.Subscriber("/pedsim_simulator/simulated_agents",social_force, set_position)
+    rospy.Subscriber("/pedsim_simulator/simulated_agents",AgentForce, set_position)
 """def callback(data):
     rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
     
@@ -640,4 +640,3 @@ while not rospy.is_shutdown():
         set_random_force()
         get_random_force()       
         print("Sebastian")
-        
