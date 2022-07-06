@@ -43,7 +43,7 @@ roslaunch pedsim_simulator cruz.launch
 
 ### Contributors
 * Juan Sebastian Hernandez Reyes
-* Jose Manuel Fajardo
+* Jose Manuel Fajardo Dueñas
 
 The package is a **work in progress** mainly used in research prototyping. Pull requests and/or issues are highly encouraged.
 
