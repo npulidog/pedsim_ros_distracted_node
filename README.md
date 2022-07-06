@@ -35,6 +35,7 @@ roslaunch pedsim_simulator cruz.launch
 <p align="center">
 <img src="figures/rosgraph.png" width=1500/>
 </p>
+
 ### Developers
 * Nicolas Pulido Gerena
 * Camilo Ernesto Campo Pacheco
