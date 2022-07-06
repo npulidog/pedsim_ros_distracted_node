@@ -1,6 +1,7 @@
 # Pedestrian Simulator (Pedsim_ROS) - Distracted Node
 
-This repository presents the library "Pedestrian Simulator (Pedsim_ROS) - Distracted Node" for a pedestrians simulator with distracted behavior based on the Pedsim_ROS library which is also based on the Helbing social force model. The implementation of the library is based on the addition of nodes and distractor topics to show different behaviors of the agents.
+This repository presents the library "Pedestrian Simulator (Pedsim_ROS) - Distracted Node" for a pedestrians simulator with distracted behavior based on the [Pedsim_ROS](https://github.com/srl-freiburg/pedsim_ros) library which is also based on social force
+model of [Helbing et. al](http://arxiv.org/pdf/cond-mat/9805244.pdf). The implementation of the library is based on the addition of nodes and distractor topics to show different behaviors of the agents.
 
 
 ### Features
@@ -28,9 +29,8 @@ roslaunch pedsim_simulator Pasillo.launch
 ```
 roslaunch pedsim_simulator cruz.launch
 ```
+### ROS Computation Graph (rqt_graph)
 
-### Licence
-The core `libpedsim` is licensed under LGPL. The ROS integration and extensions are licensed under BSD.
 
 ### Developers
 * Nicolas Pulido Gerena
